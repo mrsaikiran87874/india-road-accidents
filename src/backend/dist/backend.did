@@ -1,0 +1,63 @@
+type YearlyStats = 
+ record {
+   deaths: nat;
+   injuries: nat;
+   totalAccidents: nat;
+   year: nat;
+ };
+type VehicleTypeStats = 
+ record {
+   deaths: nat;
+   injuries: nat;
+   totalAccidents: nat;
+   vehicleType: VehicleType;
+   yearlyBreakdown: vec YearlyStats;
+ };
+type VehicleType = 
+ variant {
+   Car;
+   HeavyVehicle;
+   Other;
+   TwoWheeler;
+ };
+type SummaryStats = 
+ record {
+   deaths: nat;
+   fatalityRate: nat;
+   injuries: nat;
+   injuryRate: nat;
+   totalAccidents: nat;
+ };
+type StateStats = 
+ record {
+   deaths: nat;
+   injuries: nat;
+   state: text;
+   totalAccidents: nat;
+   yearlyBreakdown: vec YearlyStats;
+ };
+type Guideline = 
+ record {
+   category: text;
+   description: text;
+   id: nat;
+   tips: vec text;
+   title: text;
+ };
+type DataFilter = 
+ record {
+   endYear: opt nat;
+   startYear: opt nat;
+   states: opt vec text;
+   vehicleTypes: opt vec VehicleType;
+ };
+service : {
+  getAccidentsByState: (states: vec text) -> (vec StateStats) query;
+  getAccidentsByVehicleType: (vehicleTypes: vec VehicleType) ->
+   (vec VehicleTypeStats) query;
+  getAccidentsByYear: (startYear: nat, endYear: nat) ->
+   (vec YearlyStats) query;
+  getAllStates: () -> (vec text) query;
+  getPreventionGuidelines: () -> (vec Guideline) query;
+  getSummaryStats: (filter: DataFilter) -> (SummaryStats) query;
+}

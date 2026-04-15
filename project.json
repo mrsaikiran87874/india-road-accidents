@@ -1,0 +1,23 @@
+{
+  "overview": "India Road Accident Data Analysis is an interactive data visualization dashboard showing 10 years of road accident statistics (2016–2025) across Indian states. It features filterable bar charts, pie charts, and trend lines broken down by state and vehicle type, plus an actionable prevention guidelines section.",
+  "features": [
+    "10-year accident trend charts (2016–2025)",
+    "Filter by state, vehicle type, and year range",
+    "Bar, pie, and line chart visualizations",
+    "State-by-state analysis with drill-down",
+    "Vehicle type breakdown (Two-wheelers, Cars, Heavy Vehicles)",
+    "Prevention guidelines and safety strategies",
+    "Responsive layout for all screen sizes",
+    "Accessible charts with color-blind friendly palette"
+  ],
+  "category": "productivity",
+  "tags": [
+    "data-visualization",
+    "road-safety",
+    "india",
+    "analytics",
+    "charts",
+    "public-health"
+  ],
+  "last_updated": "2026-04-15T12:41:31.428Z"
+}

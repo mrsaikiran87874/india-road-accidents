@@ -1,0 +1,21 @@
+// Version: 1.0.0
+type AccidentRecord__53678371 =
+  {
+    deaths : Nat;
+    injuries : Nat;
+    state : Text;
+    totalAccidents : Nat;
+    vehicleType : VehicleType__490789323;
+    year : Nat
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type VehicleType__490789323 = {#Car; #HeavyVehicle; #Other; #TwoWheeler};
+actor {
+  stable records :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?AccidentRecord__53678371]];
+      var elementIndex : Nat__490723111
+    }
+};
